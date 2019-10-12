@@ -41,6 +41,10 @@
             };
         }
 
+        internal object Checkconnection()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool VerifyConnectionURL(string mURL)
         {

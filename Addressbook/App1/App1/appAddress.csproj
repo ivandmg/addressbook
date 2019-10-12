@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
@@ -26,9 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="NewFolder\" />
-    <Folder Include="Views\" />
+    <EmbeddedResource Update="Views\BookPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
